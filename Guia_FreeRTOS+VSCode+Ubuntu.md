@@ -1,5 +1,6 @@
 # Instalação e Configuração do FreeRTOS e Visual Studio Code no Ubuntu
 ## Referência: [Vídeo tutorial de configuração do FreeRTOS no Ubuntu](https://www.youtube.com/watch?v=wZmXPj1YvBg)
+
 ## Downloads Necessários
 
 - **FreeRTOS**: Baixe do [site oficial do FreeRTOS+VSCode](https://freertos.org).  Selecione a versão normal, conforme indicado na imagem abaixo
