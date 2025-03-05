@@ -1,10 +1,15 @@
 # Instalação e Configuração do FreeRTOS e Visual Studio Code no Ubuntu
-
-Referência: [Vídeo tutorial de configuração do FreeRTOS no Ubuntu](https://www.youtube.com/watch?v=wZmXPj1YvBg)
+## Referência:
+[Vídeo tutorial de configuração do FreeRTOS no Ubuntu](https://www.youtube.com/watch?v=wZmXPj1YvBg)
 
 ## Downloads Necessários
 
 - **FreeRTOS**: Baixe do [site oficial do FreeRTOS](https://freertos.org). Selecione a versão `.deb` conforme indicado na imagem.
+
+<p align="center">
+  <img src="Figures/FreeRTOS_Download1.png" alt="Baixar FreeRTOS" width="500">
+</p>
+  
 - **Visual Studio Code**: Baixe do [site oficial do Visual Studio Code](https://code.visualstudio.com/). Selecione a versão `.deb` conforme indicado na imagem.
 
 > Salve os arquivos em Downloads.
@@ -50,7 +55,7 @@ ls
 ```
 
 ### Instale o Visual Studio Code
-Substitua o 'nome_do_arquivo.deb' pelo nome do arquivo do VScode que o comando `ls exibiu
+Substitua o 'nome_do_arquivo.deb' pelo nome do arquivo do VScode que o comando `ls` exibiu
 
 ```bash
 sudo dpkg -i 'nome_do_arquivo.deb'
