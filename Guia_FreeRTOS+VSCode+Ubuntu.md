@@ -176,15 +176,32 @@ Clique na opção 'Clone Git Repository' e cole o link do repositório:
 https://github.com/vsserafim/twotasks-posix-gcc.git
 ```
 
+<p align="center">
+  <img src="Figures/CloneRep.png" width="500">
+</p>
+
 > Crie uma pasta em documentos, evitando colocar espaços no nome. Sugestão: Documentos/Projetos_FreeRTOS
+
+
+<p align="center">
+  <img src="Figures/Folder.png" width="500">
+</p>
 
 > O arquivo Makefile, presente no repositório, necessita da variável de ambiente que configuramos, por essa razão o nome 'FREERTOS_PATH' não pode ser alterado.
 
 ### Instale as extensões do C e C++
 Procure por 'C/C++' da Microsoft e outras extensões necessárias para o desenvolvimento com FreeRTOS e instale-as através da aba de extensões no VSCode.
 
+<p align="center">
+  <img src="Figures/CodeExtensions.png" width="500">
+</p>
+
 ### Execute o projeto
-Abra o arquivo 'main' e execute o o atalho `ctrl+shift+b (>Run Build Task)
+Abra o arquivo 'main' e execute o o atalho `ctrl+shift+b` (>Run Build Task)
+
+<p align="center">
+  <img src="Figures/RunBuildTask.png" width="500">
+</p>
 
 ### Visualizando teste através do terminal
 Podemos verificar a funcionalidade do programa através do terminal do VSCode ou do linux. Utilizaremos o terminal do linux.
@@ -198,4 +215,13 @@ cd Documents/Projetos_FreeRTOS/twotasks-posix-gcc/build
 ./modelo-posix-gcc
 ```
 
+<p align="center">
+  <img src="Figures/FileExecute.png" width="500">
+</p>
+
+
 O programa de teste executa duas tarefas e exibe na tela a sua conclusão
+
+<p align="center">
+  <img src="Figures/Result.png" width="500">
+</p>
