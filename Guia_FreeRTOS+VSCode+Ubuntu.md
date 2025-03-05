@@ -6,7 +6,9 @@
 
 - **FreeRTOS**: Baixe do [site oficial do FreeRTOS](https://freertos.org). Selecione a versão `.deb` conforme indicado na imagem.
 
-![Instalação do VSCode](Figures/FreeRTOS_Download.jpg)
+<p align="center">
+  <img src="Figures/FreeRTOS_Download1.png" alt="Baixar FreeRTOS" width="500">
+</p>
   
 - **Visual Studio Code**: Baixe do [site oficial do Visual Studio Code](https://code.visualstudio.com/). Selecione a versão `.deb` conforme indicado na imagem.
 
