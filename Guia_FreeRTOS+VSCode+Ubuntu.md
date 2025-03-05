@@ -7,7 +7,7 @@
 - **FreeRTOS**: Baixe do [site oficial do FreeRTOS](https://freertos.org). Selecione a versão `.deb` conforme indicado na imagem.
 
 <p align="center">
-  <img src="Figures/FreeRTOS_Download1.png" alt="Baixar FreeRTOS" width="500">
+  <img src="Figures/FreeRTOS_Download1.png" width="700">
 </p>
   
 - **Visual Studio Code**: Baixe do [site oficial do Visual Studio Code](https://code.visualstudio.com/). Selecione a versão `.deb` conforme indicado na imagem.
@@ -36,11 +36,17 @@ Antes de iniciar, aqui estão algumas dicas para navegação e comandos básicos
 ### Abra o terminal do Linux
 Use o atalho `Ctrl+Alt+t`
 
+
+
 ### Instale Meta Pacotes Fundamentais para Compilação
 
 ```bash
 sudo apt install build-essential
 ```
+
+<p align="center">
+  <img src="Figures/meta_install.png" width="500">
+</p>
 
 ### Acesse os Arquivos Baixados em Downloads
 
@@ -54,12 +60,20 @@ cd Downloads
 ls
 ```
 
+<p align="center">
+  <img src="Figures/pwd.png" alt="Baixar FreeRTOS" width="500">
+</p>
+
 ### Instale o Visual Studio Code
 Substitua o 'nome_do_arquivo.deb' pelo nome do arquivo do VScode que o comando `ls` exibiu
 
 ```bash
 sudo dpkg -i 'nome_do_arquivo.deb'
 ```
+
+<p align="center">
+  <img src="Figures/CodeInstalled.png" width="500">
+</p>
 
 ### Descompacte o FreeRTOS
 Substitua o 'nome_do_arquivo.zip' pelo nome do arquivo do FreeRTOS que o comando `ls` exibiu
@@ -68,14 +82,21 @@ Substitua o 'nome_do_arquivo.zip' pelo nome do arquivo do FreeRTOS que o comando
 unzip 'nome_do_arquivo.zip'
 ```
 
+<p align="center">
+  <img src="Figures/UnzipFreeR.png" width="500">
+</p>
+
 ### Mova a Pasta Descompactada do FreeRTOS para a Pasta 'Home'
 Substitua o 'nome_da_pasta_FreeRTOS' pelo nome do arquivo do FreeRTOS recém descompactado (veja os arquivos através do comando `ls` novamente)
 ```bash
 mv 'nome_da_pasta_FreeRTOS' ~/
 ```
+<p align="center">
+  <img src="Figures/MoveFreeR.png" width="500">
+</p>
 
 ### Instale o Git
-
+Instale também o Git, para que seja possível clonar bibliotecas do github a partir do VSCode
 ```bash
 sudo apt install git
 ```
@@ -89,6 +110,10 @@ O seguinte comando define a variável de ambiente FREERTOS_PATH referenciada ao 
 ```bash
 export FREERTOS_PATH=~/'nome_da_pasta_do_FreeRTOS'
 ```
+
+<p align="center">
+  <img src="Figures/FreeRAV.png" width="500">
+</p>
 
 ### Tornando a Configuração Permanente
 
@@ -104,10 +129,18 @@ cd
 nano .profile
 ```
 
+<p align="center">
+  <img src="Figures/NanoProfile.png" width="500">
+</p>
+
 ### Vá até o fim do arquivo e adicione a linha (lembre-se de substituir 'nome_da_pasta_do_FreeRTOS' pelo nome real):
 ```bash
 export FREERTOS_PATH=~/'nome_da_pasta_do_FreeRTOS'
 ```
+
+<p align="center">
+  <img src="Figures/NPsaveModf.png" width="500">
+</p>
 
 > Em caso de alteração do nome da pasta do FreeRTOS (por exemplo, mudança de versão), é necessário editar o caminho novamente no arquivo `.profile`.
 
