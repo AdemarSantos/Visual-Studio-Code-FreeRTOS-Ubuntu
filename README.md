@@ -14,13 +14,13 @@ Para começar, siga os passos detalhados no guia principal:
 ## Etapas do Guia
 
 1. **Instalação e Configuração Inicial**  
-   Instalação e Configuração Inicial - Instruções para instalar o VSCode e o FreeRTOS, além de preparar o ambiente Ubuntu.
+   Instruções para instalar o VSCode, FreeRTOS e git no Ubuntu.
 
-2. **Configuração de Variáveis de Ambiente**  
-   Configuração de Variáveis de Ambiente - Detalhes sobre como configurar as variáveis de ambiente necessárias para o FreeRTOS.
+2. **Configuração de Variável de Ambiente**  
+   Detalhes sobre como configurar a variável de ambiente necessária para o FreeRTOS.
 
 3. **Uso do VSCode com FreeRTOS**  
-   Uso do VSCode com FreeRTOS - Guia sobre como usar o VSCode para desenvolver e testar programas usando FreeRTOS.
+   Teste do VSCode para desenvolver programas usando FreeRTOS.
 
 ## Créditos
 Vínicius Serafim - https://youtu.be/wZmXPj1YvBg
