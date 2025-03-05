@@ -1,78 +1,163 @@
-# Guia de Instalação e Configuração do FreeRTOS e VSCode no Ubuntu
+# Instalação e Configuração do FreeRTOS e Visual Studio Code no Ubuntu
 
-## Recursos e Links Úteis
+Referência: [Vídeo tutorial de configuração do FreeRTOS no Ubuntu](https://www.youtube.com/watch?v=wZmXPj1YvBg)
 
-- **Vídeo de Referência**: [Configuração do FreeRTOS no Ubuntu](https://www.youtube.com/watch?v=wZmXPj1YvBg)
-- **Site para baixar FreeRTOS**: [FreeRTOS Official](https://freertos.org)
-  - Baixe a versão `.deb` conforme indicado na imagem.
-- **Site para baixar Visual Studio Code**: [VSCode Official](https://code.visualstudio.com/)
-  - Baixe a versão `.deb` conforme indicado na imagem.
+## Downloads Necessários
 
-## Dicas de Terminal
+- **FreeRTOS**: Baixe do [site oficial do FreeRTOS](https://freertos.org). Selecione a versão `.deb` conforme indicado na imagem.
+- **Visual Studio Code**: Baixe do [site oficial do Visual Studio Code](https://code.visualstudio.com/). Selecione a versão `.deb` conforme indicado na imagem.
 
-- `pwd` - Exibe o diretório atual.
-- `ls` - Lista os arquivos no diretório atual.
-- `cd <Destino>/` - Navega para um diretório específico.
-- `mv <nome_do_arquivo> <Destino>/` - Move o arquivo.
-- `unzip <nome_do_arquivo>` - Extrai o arquivo.
-- `Ctrl+l` - Limpa a tela do terminal.
-- `Ctrl+Shift+c` - Copia.
-- `Ctrl+Shift+v` - Cola.
-- `Ctrl+Alt+t` - Abre o terminal.
+> Salve os arquivos em Downloads.
 
-Lembre-se da diferenciação entre maiúsculas e minúsculas e confirme as instalações com 'Y+Enter' ou 'Enter'.
+## Dicas de Utilização do Terminal
 
-## 1. Descompactando e instalando arquivos
+Antes de iniciar, aqui estão algumas dicas para navegação e comandos básicos no terminal:
+- `pwd`: Exibe o diretório de acesso atual do terminal.
+- `ls`: Exibe informações sobre os arquivos no diretório de acesso atual do terminal.
+- `cd 'Destino'/`: Muda o acesso atual do terminal para um diretório específico.
+- `mv 'nome_do_arquivo' 'Destino'/`: Move o arquivo. Exemplo: `mv 'FreeRTOSv202212.01' ~/`.
+- `unzip 'nome_do_arquivo'`: Extrai o arquivo para a mesma pasta que ele está.
+- `Ctrl+l`: Limpa a tela do terminal.
+- `Ctrl+Shift+c`: Copia.
+- `Ctrl+Shift+v`: Cola.
+- `Ctrl+Alt+t`: Abre um novo terminal.
+
+> Atenção para a diferenciação entre maiúsculas e minúsculas.
+
+> Lembre-se de sempre confirmar as instalações através do comando 'Y+Enter' ou simplesmente 'Enter'.
+
+## 1. Descompactando e Instalando Arquivos
+
+### Abra o terminal do Linux
+Use o atalho `Ctrl+Alt+t`
+
+### Instale Meta Pacotes Fundamentais para Compilação
 
 ```bash
-# Abra o terminal
-# Instale meta pacotes fundamentais para compilação
 sudo apt install build-essential
+```
 
-# Acesse os arquivos baixados em Downloads
+### Acesse os Arquivos Baixados em Downloads
+
+```bash
 cd Downloads
+```
 
-# Liste os arquivos
+### Liste os Arquivos Presentes em Downloads
+
+```bash
 ls
+```
 
-# Instale o Visual Studio Code
-sudo dpkg -i <nome do arquivo .deb do VSCode>
+### Instale o Visual Studio Code
+Substitua o 'nome_do_arquivo.deb' pelo nome do arquivo do VScode que o comando `ls exibiu
 
-# Descompacte o FreeRTOS
-unzip <nome do arquivo .zip do FreeRTOS>
+```bash
+sudo dpkg -i 'nome_do_arquivo.deb'
+```
 
-# Mova a pasta do FreeRTOS para a pasta Home
-mv <nome da pasta FreeRTOS> ~/
+### Descompacte o FreeRTOS
+Substitua o 'nome_do_arquivo.zip' pelo nome do arquivo do FreeRTOS que o comando `ls` exibiu
 
-# Instale o Git
+```bash
+unzip 'nome_do_arquivo.zip'
+```
+
+### Mova a Pasta Descompactada do FreeRTOS para a Pasta 'Home'
+Substitua o 'nome_da_pasta_FreeRTOS' pelo nome do arquivo do FreeRTOS recém descompactado (veja os arquivos através do comando `ls` novamente)
+```bash
+mv 'nome_da_pasta_FreeRTOS' ~/
+```
+
+### Instale o Git
+
+```bash
 sudo apt install git
+```
 
-# Configure a variável de ambiente para o FreeRTOS
-export FREERTOS_PATH=~/<nome da pasta FreeRTOS>
+## 2. Configurando Referência ao FreeRTOS
 
-# Para manter a configuração após reiniciar, adicione ao .profile
+Configuraremos uma variável de ambiente para indicar onde o FreeRTOS está localizado, e faremos essa variável ser inicializada junto com o sistema.
+
+### Configure a Variável de Ambiente
+O seguinte comando define a variável de ambiente FREERTOS_PATH referenciada ao endereço da pasta. Para isso, modifique 'nome_da_pasta_do_FreeRTOS' pelo nome visto anteriormente
+```bash
+export FREERTOS_PATH=~/'nome_da_pasta_do_FreeRTOS'
+```
+
+### Tornando a Configuração Permanente
+
+Como as configurações de variáveis de ambiente se perdem ao reiniciar a máquina, precisamos fazer com que a variável de ambiente seja configurada automaticamente na inicialização do sistema.
+
+Acesse a pasta Home
+```bash
 cd
+```
+
+### Abra o arquivo .profile para adicionar a variável de ambiente permanentemente
+```bash
 nano .profile
-# Cole `export FREERTOS_PATH=~/<nome da pasta FreeRTOS>` no fim do arquivo
-# Salve com 'Ctrl+x', 'y', 'Enter'
-# Para testar, execute:
+```
+
+### Vá até o fim do arquivo e adicione a linha (lembre-se de substituir 'nome_da_pasta_do_FreeRTOS' pelo nome real):
+```bash
+export FREERTOS_PATH=~/'nome_da_pasta_do_FreeRTOS'
+```
+
+> Em caso de alteração do nome da pasta do FreeRTOS (por exemplo, mudança de versão), é necessário editar o caminho novamente no arquivo `.profile`.
+
+### Salvar e Sair do Nano
+Para salvar basta pressionar as teclas 'Ctrl+x' e confirmar com 'y'
+Feito isso, basta pressionar 'Enter' para sair
+
+### Testando a Configuração
+
+Para testar se a configuração foi aplicada corretamente, você pode executar o arquivo `.profile` para aplicar as mudanças imediatamente:
+
+```bash
 source .profile
-# Inicie o VSCode via terminal
+```
+
+> Caso deseje testar se a variável foi configurada corretamente, você pode usar o comando `echo $FREERTOS_PATH`, que deve retornar o caminho que você configurou.
+
+
+## 3. Uso do VSCode + FreeRTOS
+Faremos as primeiras configurações no VSCode e o download do repostório teste.
+
+### Abra o VSCode
+Enquanto o sistema ainda não foi reiniciado, é necessário abrir o VSCode através do terminal:
+
+```bash
 code
+```
 
-# Clone o repositório
-# No VSCode, selecione 'Clone Git Repository' e cole o link do repositório
+### Clone o repositório teste
+Clique na opção 'Clone Git Repository' e cole o link do repositório:
+
+```plaintext
 https://github.com/vsserafim/twotasks-posix-gcc.git
+```
 
-# Crie uma pasta sem espaços para os projetos, por exemplo:
-mkdir ~/Documentos/Projetos_FreeRTOS
+> Crie uma pasta em documentos, evitando colocar espaços no nome. Sugestão: Documentos/Projetos_FreeRTOS
 
-# Abra a pasta clonada
-cd ~/Documentos/Projetos_FreeRTOS/twotasks-posix-gcc
+> O arquivo Makefile, presente no repositório, necessita da variável de ambiente que configuramos, por essa razão o nome 'FREERTOS_PATH' não pode ser alterado.
 
-# Instale extensões necessárias de C e C++
-# Abra o arquivo 'main' e execute a tarefa de build com 'ctrl+shift+b'
+### Instale as extensões do C e C++
+Procure por 'C/C++' da Microsoft e outras extensões necessárias para o desenvolvimento com FreeRTOS e instale-as através da aba de extensões no VSCode.
 
-# Para executar o programa, use:
-cd build
+### Execute o projeto
+Abra o arquivo 'main' e execute o o atalho `ctrl+shift+b (>Run Build Task)
+
+### Visualizando teste através do terminal
+Podemos verificar a funcionalidade do programa através do terminal do VSCode ou do linux. Utilizaremos o terminal do linux.
+Se o repositório estiver salvo na página com o nome e local sugeridos, abra a pasta onde a tarefa está através do comando:
+
+```bash
+cd Documents/Projetos_FreeRTOS/twotasks-posix-gcc/build
+```
+
+```bash
 ./modelo-posix-gcc
+```
+
+O programa de teste executa duas tarefas e exibe na tela a sua conclusão
