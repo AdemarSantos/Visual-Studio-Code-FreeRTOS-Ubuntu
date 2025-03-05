@@ -9,7 +9,7 @@ Este guia inclui as etapas necessárias, desde a instalação do software necess
 
 Para começar, siga os passos detalhados no guia principal:
 
-[Guia de Instalação e Configuração](./Guia_de_Instalacao.md)
+[Guia de Instalação e Configuração](./Guia FreeRTOS + VSCode + Ubuntu.md)
 
 ## Etapas do Guia
 
