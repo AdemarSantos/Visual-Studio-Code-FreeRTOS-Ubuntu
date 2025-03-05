@@ -242,4 +242,4 @@ O programa de teste executa duas tarefas e exibe na tela a sua conclusão
   <img src="Figures/Result.png" width="500">
 </p>
 
-### Agora o seu VSCode já está proponto para executar projetos do FreeRTOS
+### Agora o seu VSCode já está pronto para executar projetos do FreeRTOS
