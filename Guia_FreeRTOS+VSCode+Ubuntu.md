@@ -4,13 +4,13 @@
 
 ## Downloads Necessários
 
-- **FreeRTOS**: Baixe do [site oficial do FreeRTOS](https://freertos.org). Selecione a versão `.deb` conforme indicado na imagem.
+- **FreeRTOS**: Baixe do [site oficial do FreeRTOS](https://freertos.org).  Selecione a versão normal, conforme indicado na imagem.
 
 <p align="center">
   <img src="Figures/FreeRTOS_Download.png" width="700">
 </p>
   
-- **Visual Studio Code**: Baixe do [site oficial do Visual Studio Code](https://code.visualstudio.com/). Selecione a versão `.deb` conforme indicado na imagem.
+- **Visual Studio Code**: Baixe do [site oficial do Visual Studio Code](https://code.visualstudio.com/).
 
 > Salve os arquivos em Downloads.
 
