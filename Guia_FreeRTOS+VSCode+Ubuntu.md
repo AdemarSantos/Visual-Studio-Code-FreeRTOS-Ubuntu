@@ -30,6 +30,8 @@ Antes de iniciar, aqui estão algumas dicas para navegação e comandos básicos
 
 > Lembre-se de sempre confirmar as instalações através do comando 'Y+Enter' ou simplesmente 'Enter'
 
+> Quando o comando `sudo` for usado, será necessário inserir a senha do usuário administrador da máquina
+
 ## 1. Descompactando e Instalando Arquivos
 
 ### Abra o terminal do Linux
@@ -53,6 +55,10 @@ Vá até a pasta downloads, onde os arquivos baixados estarão
 cd Downloads
 ```
 
+<p align="center">
+  <img src="Figures/pwd.png" alt="Baixar FreeRTOS" width="500">
+</p>
+
 ### Liste os Arquivos Presentes em Downloads
 Use o comando `ls` para listar os arquivos na pasta
 
@@ -61,7 +67,7 @@ ls
 ```
 
 <p align="center">
-  <img src="Figures/pwd.png" alt="Baixar FreeRTOS" width="500">
+  <img src="Figures/lsTest.png" alt="Baixar FreeRTOS" width="500">
 </p>
 
 ### Instale o Visual Studio Code
