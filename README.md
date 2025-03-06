@@ -23,4 +23,4 @@ Para começar, siga os passos detalhados no guia principal:
    Teste do VSCode para desenvolver programas usando FreeRTOS.
 
 ## Créditos
-Vínicius Serafim - https://youtu.be/wZmXPj1YvBg
+[Vínicius Serafim](https://www.youtube.com/c/Vin%C3%ADciusSerafim)
