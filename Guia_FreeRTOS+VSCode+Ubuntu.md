@@ -216,7 +216,7 @@ Procure por `C/C++` da Microsoft e instale-o através da aba de extensões no VS
 > Ao abrir o arquivo main pela primeira vez possivelmente aparecerá um pop-up requisitando mais extensões, basta aceitar 
 
 ### Execute o projeto
-Abra o arquivo 'main' e execute o o atalho `ctrl+shift+b` (>Run Build Task) para rodar o arquivo
+Abra o arquivo 'main' e execute o atalho `ctrl+shift+b` (>Run Build Task) para rodar o arquivo
 
 <p align="center">
   <img src="Figures/RunBuildTask.png" width="500">
