@@ -1,7 +1,7 @@
 # Guia de Configuração do FreeRTOS com VSCode no Ubuntu
 Autor: Ademar Santos
 
-Bem-vindo ao repositório do guia de configuração do FreeRTOS com Visual Studio Code no Ubuntu. Este guia foi desenvolvido para ajudar usuários a instalar e configurar o ambiente necessário para desenvolvimento usando FreeRTOS em um sistema Ubuntu.
+Bem-vindo ao repositório do guia de configuração do FreeRTOS com Visual Studio Code no Ubuntu. Este guia foi desenvolvido para ajudar usuários a instalar e configurar o ambiente necessário para desenvolvimento usando FreeRTOS em um sistema Linux Ubuntu.
 
 Este guia inclui as etapas necessárias, desde a instalação do software necessário até a configuração do ambiente de desenvolvimento.
 
