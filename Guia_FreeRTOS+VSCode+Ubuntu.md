@@ -32,7 +32,7 @@ Antes de iniciar, aqui estão algumas dicas para navegação e comandos básicos
 
 > Quando o comando `sudo` for usado, será necessário inserir a senha do usuário administrador da máquina
 
-## 1. Descompactando e Instalando Arquivos
+## 1. Instalação e Configuração Inicial
 
 ### Abra o terminal do Linux
 É possível abrir o terminal pressionando o atalho `Ctrl+Alt+t` ou a teclado 'Win' e pesquisando por 'Terminal'
@@ -112,7 +112,7 @@ Instale também o Git executando o comando abaixo, para que seja possível clona
 sudo apt install git
 ```
 
-## 2. Configurando Referência ao FreeRTOS
+## 2. Configuração de Variável de Ambiente
 
 Configuraremos uma variável de ambiente para indicar onde o FreeRTOS está localizado, e faremos essa variável ser inicializada junto com o sistema
 
