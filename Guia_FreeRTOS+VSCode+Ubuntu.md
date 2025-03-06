@@ -198,7 +198,7 @@ https://github.com/vsserafim/twotasks-posix-gcc.git
 </p>
 
 Crie uma pasta em documentos, evitando colocar espaços no nome
-Sugestão: Documentos/Projetos_FreeRTOS
+Sugestão: Projetos_FreeRTOS
 
 <p align="center">
   <img src="Figures/Folder.png" width="500">
