@@ -272,3 +272,5 @@ Task 2
 (espera ~1 segundo)
 ...
 ```
+
+> Essas mensagens aparecem quase simultaneamente porque ambas as tarefas são criadas praticamente ao mesmo tempo e possuem tempos de espera iguais.
