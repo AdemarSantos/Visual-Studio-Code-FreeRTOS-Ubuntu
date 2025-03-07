@@ -248,4 +248,27 @@ O programa de teste executa duas tarefas e exibe na tela a sua conclusão
   <img src="Figures/Result.png" width="500">
 </p>
 
-### Agora o seu VSCode já está pronto para executar projetos do FreeRTOS
+## Explicação sobre o programa de teste
+
+Este exemplo ilustra, de forma simples, como criar duas tarefas básicas utilizando o FreeRTOS em um ambiente Linux. O objetivo é mostrar como o escalonador do FreeRTOS gerencia múltiplas tarefas simultaneamente.
+
+### Funcionamento das tarefas (`main.c`)
+
+No código principal são criadas duas tarefas com a função `xTaskCreate()`. Ambas têm a mesma prioridade e realizam ações semelhantes:
+
+- Imprimem uma mensagem (`"Task 1"` ou `"Task 2"`).
+- Aguardam 1 segundo (`vTaskDelay(pdMS_TO_TICKS(1000))`).
+
+Como ambas tarefas iniciam praticamente juntas e possuem a mesma prioridade, o escalonador executa rapidamente uma após a outra. Isso faz com que as mensagens apareçam quase simultaneamente no terminal, seguido por um intervalo de espera em conjunto.
+
+O resultado visual será algo como:
+
+```
+Task 1
+Task 2
+(espera ~1 segundo)
+Task 1
+Task 2
+(espera ~1 segundo)
+...
+```
